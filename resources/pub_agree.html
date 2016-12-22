@@ -1,0 +1,1925 @@
+<!DOCTYPE html><html><head><style type='text/css'>/*
+
+Some CSS Copyright 2010, Google Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+    * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,           
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY           
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.data-table-container {
+  display: block;
+  border-top: 1px solid #E1EEEC;
+}
+
+.data-table {
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.table-row {
+  background: #fff;
+}
+
+.table-data {
+  padding: 2px 5px;
+  border-bottom: 1px dotted #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.column-header {
+  vertical-align: top;
+  white-space: nowrap;
+  background: #ffe;
+  cursor: pointer;
+  padding: 2px 6px 2px 4px;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.column-header-name {
+  margin: 0 0 0 21px;
+  padding: 2px 0 0 0;
+  display: block;
+}
+
+.column-header-name.slim {
+  margin: 0;
+  padding: 2px 0 0 0;
+  display: block;
+}
+
+.data-table-cell-content {
+  line-height: 1.2;
+  color: #222;
+  position: relative;
+}
+</style></head><body><div class="data-table-container">
+  <table class="data-table" cellspacing="0">
+    <tbody class="data-table-body">
+      <tr class="table-row">
+        
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">date_checked</span>
+            </div>
+          </td>
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">publisher</span>
+            </div>
+          </td>
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">open_access</span>
+            </div>
+          </td>
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">exclusive_license</span>
+            </div>
+          </td>
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">copyright_transfer</span>
+            </div>
+          </td>
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">agreement_available</span>
+            </div>
+          </td>
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">url</span>
+            </div>
+          </td>
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">archived_url</span>
+            </div>
+          </td>
+          <td class="table-data column-header ">
+            <div class="column-header-title ">
+              
+              <span class="column-header-name slim">notes</span>
+            </div>
+          </td>
+      </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">AIP Publishing</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;publishing.aip.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;aippub&#x2F;files&#x2F;AIPP_Author_Copyright_License.pdf</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161222112002&#x2F;https:&#x2F;&#x2F;publishing.aip.org&#x2F;sites&#x2F;default&#x2F;files&#x2F;aippub&#x2F;files&#x2F;AIPP_Author_Copyright_License.pdf</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">American Chemical Society</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;pubs.acs.org&#x2F;page&#x2F;copyright&#x2F;journals&#x2F;index.html</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Not archived due to robots.txt; general form A taken for coding</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">American Psychological Association</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;www.apa.org&#x2F;pubs&#x2F;authors&#x2F;publication-rights-form.pdf</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161117133108&#x2F;http:&#x2F;&#x2F;www.apa.org&#x2F;pubs&#x2F;authors&#x2F;publication-rights-form.pdf</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">BMJ</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;www.bmj.com&#x2F;company&#x2F;products-services&#x2F;rights-and-licensing&#x2F;author-self-archiving-and-permissions&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161007023236&#x2F;http:&#x2F;&#x2F;www.bmj.com&#x2F;company&#x2F;products-services&#x2F;rights-and-licensing&#x2F;author-self-archiving-and-permissions&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Brill Academic Publishers</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;www.brill.com&#x2F;downloads&#x2F;conditions.pdf</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20150911205600&#x2F;http:&#x2F;&#x2F;www.brill.com&#x2F;downloads&#x2F;conditions.pdf</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Cambridge University Press</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;authornet.cambridge.org&#x2F;information&#x2F;digital&#x2F;rights.asp</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20150914051819&#x2F;http:&#x2F;&#x2F;authornet.cambridge.org&#x2F;information&#x2F;digital&#x2F;rights.asp</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">eLife</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">1</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;submit.elifesciences.org&#x2F;html&#x2F;elife_author_instructions.html</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Not archived due to robots.txt</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Elsevier</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;www.elsevier.com&#x2F;about&#x2F;company-information&#x2F;policies&#x2F;copyright</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161022034954&#x2F;https:&#x2F;&#x2F;www.elsevier.com&#x2F;about&#x2F;company-information&#x2F;policies&#x2F;copyright</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Emerald Group Publishing</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;www.emeraldgrouppublishing.com&#x2F;authors&#x2F;writing&#x2F;author_rights.htm</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160517032742&#x2F;http:&#x2F;&#x2F;www.emeraldgrouppublishing.com&#x2F;authors&#x2F;writing&#x2F;author_rights.htm</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Hindawi</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">1</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;www.hindawi.com&#x2F;license&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160503193205&#x2F;http:&#x2F;&#x2F;www.hindawi.com&#x2F;license&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">IEEE</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;www.ieee.org&#x2F;documents&#x2F;ieeecopyrightform.pdf</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160912192423&#x2F;https:&#x2F;&#x2F;www.ieee.org&#x2F;documents&#x2F;ieeecopyrightform.pdf</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">IOP Publishing</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;ioppublishing.org&#x2F;img&#x2F;landingPages&#x2F;guidelines-and-policies&#x2F;author-guidelines.html#TOC10</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160324050144&#x2F;http:&#x2F;&#x2F;ioppublishing.org&#x2F;img&#x2F;landingPages&#x2F;guidelines-and-policies&#x2F;author-guidelines.html#TOC10</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">JSTOR</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">This is not a publisher but a repository.</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">MDPI</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">1</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;www.mdpi.com&#x2F;authors</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161023193110&#x2F;http:&#x2F;&#x2F;mdpi.com&#x2F;authors</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Nature Publishing Group</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;www.nature.com&#x2F;authors&#x2F;policies&#x2F;license.html</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161202192331&#x2F;http:&#x2F;&#x2F;www.nature.com&#x2F;authors&#x2F;policies&#x2F;license.html</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Open Library of Humanities</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">1</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;olh.openlibhums.org&#x2F;about&#x2F;submissions&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160320115043&#x2F;https:&#x2F;&#x2F;olh.openlibhums.org&#x2F;about&#x2F;submissions&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Oxford University Press</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;www.oxfordjournals.org&#x2F;en&#x2F;access-purchase&#x2F;rights-and-permissions&#x2F;publication-rights.html</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161201030631&#x2F;http:&#x2F;&#x2F;www.oxfordjournals.org&#x2F;en&#x2F;access-purchase&#x2F;rights-and-permissions&#x2F;publication-rights.html</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Palgrave Macmillan</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;www.palgrave.com&#x2F;gp&#x2F;journal-authors&#x2F;rights-permissions&#x2F;10052490</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161222113704&#x2F;http:&#x2F;&#x2F;www.palgrave.com&#x2F;gp&#x2F;journal-authors&#x2F;rights-permissions&#x2F;10052490</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">PeerJ</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">1</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;peerj.com&#x2F;about&#x2F;policies-and-procedures&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161201050638&#x2F;https:&#x2F;&#x2F;peerj.com&#x2F;about&#x2F;policies-and-procedures&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Pensoft Publishers</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">1</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;pensoft.net&#x2F;journals#Services-for-Authors</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161028160630&#x2F;http:&#x2F;&#x2F;pensoft.net&#x2F;journals</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">PLOS</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">1</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;journals.plos.org&#x2F;plosone&#x2F;s&#x2F;licenses-and-copyright</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161130035538&#x2F;http:&#x2F;&#x2F;journals.plos.org&#x2F;plosone&#x2F;s&#x2F;licenses-and-copyright</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Royal Society</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;royalsociety.org&#x2F;~&#x2F;media&#x2F;journals&#x2F;author&#x2F;Royal-Society-Licence-to-Publish-20122016.pdf?la=en-GB</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161222113855&#x2F;https:&#x2F;&#x2F;royalsociety.org&#x2F;~&#x2F;media&#x2F;journals&#x2F;author&#x2F;Royal-Society-Licence-to-Publish-20122016.pdf?la=en-GB</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">SAGE</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;mc.manuscriptcentral.com&#x2F;societyimages&#x2F;sagedemo_wk0&#x2F;ELP%20-%202015%20for%20online%20posting.pdf</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Not archived due to robots.txt</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">SciELO</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">NA</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">This is not a publisher but a repository.</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Springer</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;www.springer.com&#x2F;gp&#x2F;open-access&#x2F;authors-rights&#x2F;self-archiving-policy&#x2F;2124</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160423083639&#x2F;http:&#x2F;&#x2F;www.springer.com&#x2F;gp&#x2F;open-access&#x2F;authors-rights&#x2F;self-archiving-policy&#x2F;2124</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Taylor &amp; Francis (Informa publishing)</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;authorservices.taylorandfrancis.com&#x2F;publishing-agreements-your-options&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160430175315&#x2F;http:&#x2F;&#x2F;authorservices.taylorandfrancis.com&#x2F;publishing-agreements-your-options&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Thieme Publishing Group</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;www.thieme.de&#x2F;statics&#x2F;dokumente&#x2F;thieme&#x2F;final&#x2F;de&#x2F;dokumente&#x2F;sw_%20autorenlounge&#x2F;Thieme_CTA_Copyright_Transfer_english_2016.pdf</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161222114420&#x2F;https:&#x2F;&#x2F;www.thieme.de&#x2F;statics&#x2F;dokumente&#x2F;thieme&#x2F;final&#x2F;de&#x2F;dokumente&#x2F;sw_%20autorenlounge&#x2F;Thieme_CTA_Copyright_Transfer_english_2016.pdf</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Ubiquity Press</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">1</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">no</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;www.ubiquitypress.com&#x2F;site&#x2F;publish&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20160424004304&#x2F;http:&#x2F;&#x2F;www.ubiquitypress.com&#x2F;site&#x2F;publish&#x2F;</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Walter de Gruyter</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;www.degruyter.com&#x2F;dg&#x2F;page&#x2F;journal-copyright-agreement</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161222114558&#x2F;https:&#x2F;&#x2F;www.degruyter.com&#x2F;dg&#x2F;page&#x2F;journal-copyright-agreement</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value "></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Wiley</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">https:&#x2F;&#x2F;authorservices.wiley.com&#x2F;author-resources&#x2F;Journal-Authors&#x2F;licensing-and-open-access&#x2F;licensing&#x2F;licensing-info-faqs.html</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161222114814&#x2F;https:&#x2F;&#x2F;authorservices.wiley.com&#x2F;author-resources&#x2F;Journal-Authors&#x2F;licensing-and-open-access&#x2F;licensing&#x2F;licensing-info-faqs.html</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">There is no default option given, so it is rather unclear. I chose to code conservatively for the author&#39;s sake.</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="table-row" data-id="">
+          
+          <td data-header="date_checked" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">20161222</div>
+            </div>
+          </td>
+          <td data-header="publisher" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">Ovid technologies &#x2F; Wolters Kluwer Health</div>
+            </div>
+          </td>
+          <td data-header="open_access" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">0</div>
+            </div>
+          </td>
+          <td data-header="exclusive_license" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="copyright_transfer" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">yes</div>
+            </div>
+          </td>
+          <td data-header="agreement_available" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">before</div>
+            </div>
+          </td>
+          <td data-header="url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;wolterskluwerblogs.com&#x2F;authors&#x2F;wp-content&#x2F;uploads&#x2F;sites&#x2F;60&#x2F;2016&#x2F;02&#x2F;Rights-Permissions_February-2016.pdf</div>
+            </div>
+          </td>
+          <td data-header="archived_url" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">http:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20161222114854&#x2F;http:&#x2F;&#x2F;wolterskluwerblogs.com&#x2F;authors&#x2F;wp-content&#x2F;uploads&#x2F;sites&#x2F;60&#x2F;2016&#x2F;02&#x2F;Rights-Permissions_February-2016.pdf</div>
+            </div>
+          </td>
+          <td data-header="notes" class="table-data ">
+            <div class="data-table-cell-content ">
+              
+              <div class="data-table-cell-value ">The document states either an exclusive license or full transfer of copyright, for author&#39;s sake I coded as both her.</div>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div></body></html>
